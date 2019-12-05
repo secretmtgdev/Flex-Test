@@ -1,0 +1,41 @@
+.row-container {
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+}
+
+.col-container {
+    flex-direction: column;
+}
+
+.row-container, .col-container {
+    justify-content: space-evenly;
+    display: inline-flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -moz-box;
+}
+
+article > section {
+    height: 500px;
+    border: 1px dashed red;
+}
+
+article > section:nth-child(odd) {
+    background-color: rgba(0, 255, 0, 1);
+}
+
+article > section:nth-child(odd), section[title="Column 2"] > section {
+    flex:1;
+}
+
+article > section:nth-child(even) {
+    background-color:rgba(255, 0, 0, 1);
+    flex: 2;
+}
+
+section[title^="Column"] section {
+    box-sizing: border-box;
+    background-color: rgba(125, 125, 125, 0.7);
+    border: 1px solid rgba(0, 0, 0, 1);
+}
